@@ -12,6 +12,7 @@ public class TicTacToeGame {
 		System.out.println("Tic-Tac-Toe game Started.");
 		boardCreation();
 		chooseYourInputs();
+		whoPlaysFirst();
 		showBoard();
 	}
 
@@ -105,5 +106,14 @@ public class TicTacToeGame {
 			showBoard();
 			enterYourChoice();
 		}
+	}
+
+	// this method will decide randomly who will start the game.
+	public static void whoPlaysFirst() {
+		int turn = (int) Math.floor(Math.random() * 10 / 2);
+		if (turn == 0) {
+			System.out.println("User will start the game.");
+		} else
+			System.out.println("Computer will start the game.");
 	}
 }
