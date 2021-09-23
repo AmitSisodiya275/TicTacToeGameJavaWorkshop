@@ -58,43 +58,52 @@ public class TicTacToeGame {
 	public static void enterYourChoice() {
 		System.out.println("Enter at which location you want to enter your " + choice);
 		int location = scanner.nextInt();
-		switch (location) {
-		case 1:
-			gameBoard[1] = choice;
+		// this if condition is checking for free space
+		// if free space is available then only user can make move
+		// else user will get a message like location is already occupied.
+		if (gameBoard[location] != choice) {
+			switch (location) {
+			case 1:
+				gameBoard[1] = choice;
+				showBoard();
+				break;
+			case 2:
+				gameBoard[2] = choice;
+				showBoard();
+				break;
+			case 3:
+				gameBoard[3] = choice;
+				showBoard();
+				break;
+			case 4:
+				gameBoard[4] = choice;
+				showBoard();
+				break;
+			case 5:
+				gameBoard[5] = choice;
+				showBoard();
+				break;
+			case 6:
+				gameBoard[6] = choice;
+				showBoard();
+				break;
+			case 7:
+				gameBoard[7] = choice;
+				showBoard();
+				break;
+			case 8:
+				gameBoard[8] = choice;
+				showBoard();
+				break;
+			case 9:
+				gameBoard[9] = choice;
+				showBoard();
+				break;
+			}
+		} else {
+			System.out.println("Location is already occupied, Enter different location : ");
 			showBoard();
-			break;
-		case 2:
-			gameBoard[2] = choice;
-			showBoard();
-			break;
-		case 3:
-			gameBoard[3] = choice;
-			showBoard();
-			break;
-		case 4:
-			gameBoard[4] = choice;
-			showBoard();
-			break;
-		case 5:
-			gameBoard[5] = choice;
-			showBoard();
-			break;
-		case 6:
-			gameBoard[6] = choice;
-			showBoard();
-			break;
-		case 7:
-			gameBoard[7] = choice;
-			showBoard();
-			break;
-		case 8:
-			gameBoard[8] = choice;
-			showBoard();
-			break;
-		case 9:
-			gameBoard[9] = choice;
-			showBoard();
-			break;
+			enterYourChoice();
 		}
 	}
 }
